@@ -1,0 +1,9 @@
+---
+- name: creating a basic playbook
+  hosts: all
+  become: true
+  tasks:  
+          - name:install nginx
+            ansible.builtin,yum:
+                    name: nginx
+                    state: present  
